@@ -12,7 +12,7 @@ class LinesController < ApplicationController
     @line = Line.find(params[:id])
   end
   def index
-    @line = Line.all
+    @lines = Line.all
 
   end
   private
