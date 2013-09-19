@@ -1,0 +1,15 @@
+<h1>Listing des lignes</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+  
+  <% @lines.each do |line| %>
+    <tr>
+      <td><%= line.title %></td>
+      <td><%= line.text %>/</td>
+    </tr>
+  <% end%>
+
+</table>
