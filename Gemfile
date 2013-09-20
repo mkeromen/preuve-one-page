@@ -43,4 +43,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'compass-rails'
 gem 'zurb-foundation'
