@@ -1,15 +1,24 @@
 <h1>Listing des lignes</h1>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
   
   <% @lines.each do |line| %>
-    <tr>
-      <td><%= line.title %></td>
-      <td><%= line.text %>/</td>
-    </tr>
+    <div>
+      <h2><%= best_in_place line, :title %></h2>
+      <p><%= best_in_place line, :text %>/</p>
+    </div>
   <% end%>
 
-</table>
+<%= form_for :line, url: lines_path do |f| %>
+  <p>
+   <%= f.label :title %><br>
+   <%= f.text_field :title %>
+  </p>
+             
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+                          
+  <p>
+     <%= f.submit %>
+  </p>
+<% end %>

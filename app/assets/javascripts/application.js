@@ -11,9 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+//= require jquery.purr
+//= require best_in_place
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
