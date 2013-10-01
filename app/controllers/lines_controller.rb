@@ -15,6 +15,13 @@ class LinesController < ApplicationController
     @lines = Line.all
 
   end
+
+  respond_to :html, :json
+  def update
+    @line = Line.find(params[:id])
+    @line.update_attributes(line_params)
+    respond_with @line
+  end
   private
     def line_params
       params.require(:line).permit(:title,:text)
