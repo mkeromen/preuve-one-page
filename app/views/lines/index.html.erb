@@ -1,13 +1,24 @@
 <h1>Listing des lignes</h1>
   
+<ul>
   <% @lines.each do |line| %>
-    <div>
+    <li>
+      <%= link_to line.title, :anchor => line.get_anchor %>
+    </li>
+  <% end%>
+</ul>
+
+  <% @lines.each do |line| %>
+    <div id="line-<%= line.id%>">
       <h2><%= best_in_place line, :title %></h2>
       <p><%= best_in_place line, :text %>/</p>
     </div>
   <% end%>
 
-<%= form_for :line, url: lines_path do |f| %>
+<%= button_to_function "Add line", "$('#add-line-form').show();$('#add_line_button').hide()", 
+    id: "add_line_button"%>
+
+<%= form_for :line,  url: lines_path, :html => { :id => "add-line-form", :style => "display:none;" }  do |f| %>
   <p>
    <%= f.label :title %><br>
    <%= f.text_field :title %>

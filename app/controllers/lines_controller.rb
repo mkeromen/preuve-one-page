@@ -14,6 +14,10 @@ class LinesController < ApplicationController
     @lines = Line.all
   end
 
+  def get_anchor
+    put "2test"
+  end
+
   respond_to :html, :json
   def update
     @line = Line.find(params[:id])
