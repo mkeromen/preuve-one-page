@@ -1,0 +1,11 @@
+<div id="new-line-edit">	
+	<p>
+  	  <strong>Titre</strong>
+  	  <%= best_in_place @line, :title %>
+	</p>
+
+	<p>
+  	  <strong>Texte</strong>
+  	  <%= best_in_place @line, :text %>
+	</p>
+</div>
