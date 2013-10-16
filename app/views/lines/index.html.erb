@@ -9,7 +9,7 @@
 </ul>
 
   <% @lines.each do |line| %>
-    <div id="line-<%= line.id%>">
+    <div id="<%= line.get_anchor%>">
       <h2><%= best_in_place line, :title %></h2>
       <p><%= best_in_place line, :text %>/</p>
     </div>
