@@ -3,8 +3,8 @@ class LinesController < ApplicationController
   def create_placeholders
     line = Line.new({:title => "Ajouter un titre", :text => "Ajouter un texte"})
     respond_to do |format|
-	   if user.save
-	      format.json { render json: line }
+	   if line.save
+	      format.json { render json: {":msg" => 'Hello'} }
        end	
     end	
   end

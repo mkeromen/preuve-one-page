@@ -4,7 +4,7 @@ class LinesController < ApplicationController
     line = Line.new({:title => "Ajouter un titre", :text => "Ajouter un texte"})
     respond_to do |format|
 	   if line.save
-	      format.json { render json: line }
+	      format.json { render json: {":msg" => 'Hello'} }
        end	
     end	
   end

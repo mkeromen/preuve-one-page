@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('.best_in_place').best_in_place()
-
-  $("#add-line").on "ajax:success", (e, data, status, xhr) ->
-    window.location.reload();
+  $("#add-line").on "ajax:success", (event, data, status, xhr) ->
+   window.location.reload()
+   console.log(data);
