@@ -1,6 +1,6 @@
 PreuveOnePage::Application.routes.draw do
   resources :lines
-  get 'createplaceholder', to: 'lines#create_placeholders'
+  get 'createplaceholder', to: 'lines#create_placeholders', as: :createplaceholder
 
   root to: 'page#index'
 
